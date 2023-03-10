@@ -1,0 +1,27 @@
+<%- include('../partials/header', {pageName: personToEdit.name + " is getting updated"}) %>
+<h1>Editing <%= personToEdit.name %></h1>
+    <form method="POST" action="/employees/<%= personToEdit._id %>?_method=PUT">
+        <div>
+            <label for="name">Update the employee's name</label>
+            <input type="text" name="name" id="name" value=<%= personToEdit.name%>>
+        </div>
+        <div>
+            <label for="image">Update the employee's image</label>
+            <input type="text" name="image" id="image" value=<%= personToEdit.image %>>
+        </div>
+        <div>
+            <label for="department">What department does the employee work in?</label>
+            <input type="text" name="department" id="department" value=<%= personToEdit.department %>>
+        </div>
+        <div>
+            <label for="position">Update the employee's position</label>
+            <input type="text" name="position" id="position" value=<%= personToEdit.position %>>
+        </div>
+        <div>
+            <label for="salary">Adjust employee's salary</label>
+            <input type="text" name="salary" id="salary" value=<%= personToEdit.salary %>>
+        </div>
+        <input type="submit" value="Edit <%= personToEdit.name %>">
+    </form>
+
+<%- include('../partials/footer') %>
