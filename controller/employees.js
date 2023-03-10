@@ -1,19 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const { Supercar } = require('../models');
+const { Employee } = require('../model');
 
-// Route to create a new supercar
+// Route to create a new Employee
 router.post('/supercars', async (req, res) => {
   try {
-    const supercar = new Supercar(req.body);
-    await supercar.save();
-    res.status(201).json(supercar);
+    const employees = new Employee(req.body);
+    await employees.save();
+    res.status(201).json(employees);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// Route to get all supercars
+// Route to get all employees
 router.get('/supercars', async (req, res) => {
   try {
     const supercars = await Supercar.find();
