@@ -1,5 +1,5 @@
 require('../config/connection');
 
 module.exports = {
-    Supercar: require('./Supercar')
+    Employee: require('./Employee')
 }

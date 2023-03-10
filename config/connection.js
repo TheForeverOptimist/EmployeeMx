@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
 
-const connectionString = process.env.SUPERCAR_DB
+const connectionString = process.env.EMPLOYEES_DB
 mongoose.connect(connectionString)
 mongoose.connection.on('connected', () => {
     console.log(`[${new Date().toLocaleTimeString()}] - MongoDB connected... 🙌 🙌 🙌`)

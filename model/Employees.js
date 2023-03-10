@@ -2,7 +2,7 @@ require('../config/connection');
 
 const mongoose = require('mongoose');
 
-const supercarSchema = new mongoose.Schema(
+const employeeSchema = new mongoose.Schema(
 {
         engine:String ,
         power:String,
@@ -12,6 +12,6 @@ const supercarSchema = new mongoose.Schema(
         model:String,
         year:String 
 })
-const Supercar = mongoose.model('superCarCollection', supercarSchema);
+const Employee = mongoose.model('empCollection', employeeSchema);
 
-module.exports = Supercar
+module.exports = Employee
