@@ -1,0 +1,10 @@
+body {
+    background-color: cornflowerblue;
+    color: black;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
