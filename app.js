@@ -12,3 +12,6 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 
+app.listen(4000, () =>{
+    console.log('Listening on Port 4000');
+});
