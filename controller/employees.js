@@ -3,7 +3,7 @@ const router = express.Router();
 const { Employee } = require('../model');
 
 // Route to create a new Employee
-router.post('/supercars', async (req, res) => {
+router.post('/employees', async (req, res) => {
   try {
     const employees = new Employee(req.body);
     await employees.save();

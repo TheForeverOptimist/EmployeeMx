@@ -4,13 +4,12 @@ const mongoose = require('mongoose');
 
 const employeeSchema = new mongoose.Schema(
 {
-        engine:String ,
-        power:String,
-        topSpeed:String,
-        color:String,
         name:String,
-        model:String,
-        year:String 
+        image:String,
+        department:String,
+        position:String,
+        salary:String
+
 })
 const Employee = mongoose.model('empCollection', employeeSchema);
 
