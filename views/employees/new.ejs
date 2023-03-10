@@ -1,0 +1,21 @@
+<%- include('../partials/header', {pageName: "Add a new Employee"}) %>
+
+<h1>Add a new Employee</h1>
+<form method="POST" action="/employees">
+    <div>
+        <label for="name">Enter the employee's name</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label for="image">Enter the URL for the image</label>
+        <input type="text" name="image" id="image">
+    </div>
+    <div>
+        <label for="department">Enter the employee's departmentr</label>
+        <input type="text" name="department" id="department">
+    </div>
+    <input type="submit" value="Submit new employee">
+</form>
+
+
+<%- include('../partials/footer') %>

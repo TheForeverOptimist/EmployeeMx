@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs') %>
+<h1>Employee Directory</h1> 
+<% for(let i = 0; i < employees.length; i++) { %>
+    <a href="/employees/<%= employees[i]._id %>">
+    <h3>Name: <%= employees[i].name %></h3>
+    <img src=<%= employees[i].image %>>
+    </a>
+    <h4>department: <%= employees[i].department %></h4>
+    <h4>position: <%= employees[i].position %></h4>
+    <h4>salary: <%= employees[i].salary %></h4>
+    <% } %>
+    <button>
+        <a href="/employees/seed">Seeds</a>
+    </button>
+
+<%- include('../partials/footer.ejs') %>
+    
